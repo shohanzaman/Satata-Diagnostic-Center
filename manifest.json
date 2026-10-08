@@ -1,0 +1,32 @@
+{
+  "name": "Satata Digital X-Ray and ECG Center",
+  "short_name": "Satata X-Ray ECG",
+  "description": "Digital X-Ray and ECG Center management application",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f6f2",
+  "theme_color": "#536f65",
+  "categories": [
+    "medical",
+    "business",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
