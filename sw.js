@@ -1,4 +1,4 @@
-const CACHE_NAME = "satata-diagnostic-center-v72";
+const CACHE_NAME = "satata-diagnostic-center-v73";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,7 +6,8 @@ const APP_SHELL = [
   "./css/style.css",
   "./manifest.json",
   "./assets/icons/icon-192.png",
-  "./assets/icons/icon-512.png"
+  "./assets/icons/icon-512.png",
+  "./js/blood-lab.js"
 ];
 
 self.addEventListener("install", event => {

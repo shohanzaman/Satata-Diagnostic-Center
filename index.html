@@ -1291,10 +1291,10 @@ async function loadAllData() {
 
   try {
     const tasks=isAdmin()
-      ? [loadCenterSharedData(),loadXrayTypes(),loadDoctors(),loadReferrers(),loadReferrerTransactions(),loadReferrerReceivables(),loadExpenses(),loadXrayReports(),loadFilmInventory(),loadBloodTestTypes()]
+      ? [loadCenterSharedData(),loadXrayTypes(),loadDoctors(),loadReferrers(),loadReferrerTransactions(),loadReferrerReceivables(),loadExpenses(),loadXrayReports(),loadFilmInventory(),loadBloodTestTypes(),loadLabModule()]
       : isInvoicePrintUser()
         ? [loadInvoicePrintRecords()]
-        : [loadCenterSharedData(),loadSharedEntryOptions(),loadXrayReports(),loadFilmInventory(),loadBloodTestTypes()];
+        : [loadCenterSharedData(),loadSharedEntryOptions(),loadXrayReports(),loadFilmInventory(),loadBloodTestTypes(),loadLabModule()];
 
     const results=await Promise.allSettled(tasks);
     const failed=results.filter(r=>r.status==='rejected');
