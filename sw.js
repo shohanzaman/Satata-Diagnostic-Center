@@ -1,12 +1,12 @@
-const CACHE_NAME = "satata-xray-ecg-v71";
+const CACHE_NAME = "satata-diagnostic-center-v72";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./blood-test.js",
-  "./style.css",
+  "./js/blood-test.js",
+  "./css/style.css",
   "./manifest.json",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./assets/icons/icon-192.png",
+  "./assets/icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {

@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Satata X-Ray ECG">
-<link rel="apple-touch-icon" href="./icons/satata-logo.jpg">
+<link rel="apple-touch-icon" href="./assets/icons/satata-logo.jpg">
 <meta name="theme-color" content="#536f65">
 <meta name="description" content="Satata Digital X-Ray and ECG Center — Cloud synced with Supabase">
 <link rel="manifest" href="./manifest.json">
@@ -26,7 +26,7 @@
 
 
 
-<link rel="stylesheet" href="./style.css"></head>
+<link rel="stylesheet" href="./css/style.css"></head>
 <body>
 
 <!-- AUTH SCREEN -->
@@ -791,7 +791,7 @@
   </div>
 </div>
 
-<script src="./blood-test.js"></script>
+<script src="./js/blood-test.js"></script>
 <script>
 // ============================================
 // SUPABASE CONFIGURATION
@@ -2689,7 +2689,7 @@ function printInvoice(patientOrId, preOpenedWindow = null) {
   '.exam-box{border:1px solid #d8e1e8;border-radius:1.5mm;overflow:hidden}.exam-box table{width:100%;border-collapse:collapse;margin:0}.exam-box th,.exam-box td{padding:1.7mm 1.4mm;border-bottom:1px solid #e5eaf0;font-size:7.7pt}.exam-box th{background:#f3f8fb;color:#0c4a6e;font-weight:800}.exam-box tr:last-child td{border-bottom:0}.center{text-align:center}.right{text-align:right}.calc{margin-top:2mm;border:1px solid #d8e1e8;border-radius:1.5mm;padding:2mm}.calc-row{display:flex;justify-content:space-between;padding:1mm 1.5mm;border-bottom:1px solid #edf1f4}.calc-row:last-child{border-bottom:0}.calc-row.grand{font-weight:800;font-size:10pt;background:#f0f9ff}.calc-row.paid{color:#047857;font-weight:700}.calc-row.due{color:#b91c1c;font-weight:800}.footer{margin-top:4mm;padding-top:3mm;border-top:1px solid #cbd5e1;display:flex;justify-content:space-between;align-items:flex-end;gap:7mm;color:#64748b;font-size:7pt}.signature{width:35mm;text-align:center;border-top:1px solid #475569;padding-top:1mm;color:#334155}.no-print{text-align:center;margin-top:7mm}.no-print button{padding:10px 20px;border:0;border-radius:8px;background:#0284c7;color:#fff;font-weight:700}@media print{.no-print{display:none!important}.invoice{border:0;padding:0}body{padding:0}}'+
   '</style></head><body><div class="invoice">'+
 
-  '<div class="header"><img class="logo" src="./icons/satata-logo.jpg" onerror="this.style.display=\'none\'"><div class="brand"><h1>Satata Digital X-Ray & ECG Center</h1><p>Sadar Hospital Road, Chuadanga</p><p>Mobile: 01711482011, 01740959497</p></div><div class="header-qr"><div id="qrcode"></div><div class="qr-label">Invoice QR</div></div></div>'+
+  '<div class="header"><img class="logo" src="./assets/icons/satata-logo.jpg" onerror="this.style.display=\'none\'"><div class="brand"><h1>Satata Digital X-Ray & ECG Center</h1><p>Sadar Hospital Road, Chuadanga</p><p>Mobile: 01711482011, 01740959497</p></div><div class="header-qr"><div id="qrcode"></div><div class="qr-label">Invoice QR</div></div></div>'+
 
   '<div class="section"><div class="section-title">Patient Information</div><div class="patient-grid"><div class="info-box patient-details"><div class="info-line"><div class="info-row"><span class="info-label">Name</span><span class="info-value">'+escapeHtml(i.name||"-")+'</span></div><div class="info-row"><span class="info-label">Age / Sex</span><span class="info-value">'+escapeHtml(i.age||"-")+' / '+escapeHtml(i.sex||"-")+'</span></div></div><div class="info-line"><div class="info-row"><span class="info-label">Invoice</span><span class="info-value">'+escapeHtml(invNo)+'</span></div><div class="info-row"><span class="info-label">Mobile</span><span class="info-value">'+escapeHtml(patientMobile||"-")+'</span></div></div><div class="info-line single"><div class="info-row"><span class="info-label">Doctor</span><span class="info-value">'+escapeHtml(i.doctor||"-")+'</span></div></div><div class="info-line"><div class="info-row"><span class="info-label">Referrer</span><span class="info-value">'+escapeHtml(referrer||"-")+'</span></div><div class="info-row"><span class="info-label">Date</span><span class="info-value">'+escapeHtml(new Date(i.created_at||Date.now()).toLocaleDateString("en-GB"))+'</span></div></div></div><div class="info-box patient-qr"><div><div id="qrcode2"></div><div class="qr-label">QR</div></div></div></div></div><div class="section"><div class="section-title">Test / Examination </div><div class="exam-box"><table><thead><tr><th>#</th><th>Test / Examination</th><th>Film / Paper</th><th>Qty</th><th class="right">Rate</th><th class="right">Amount</th></tr></thead><tbody>'+itemRows+'</tbody></table></div>'+
   '<div class="calc"><div class="calc-row"><span>Subtotal</span><span>'+money(subtotal)+'</span></div><div class="calc-row"><span>Discount</span><span>'+money(discount)+'</span></div><div class="calc-row grand"><span>Grand Total</span><span>'+money(total)+'</span></div><div class="calc-row"><span>Advance</span><span>'+money(paid)+'</span></div><div class="calc-row paid"><span>Paid</span><span>'+money(paid)+'</span></div><div class="calc-row due"><span>'+(responsibility==='referrer'?'Referrer Due':'Due')+'</span><span>'+money(due)+'</span></div></div></div>'+
