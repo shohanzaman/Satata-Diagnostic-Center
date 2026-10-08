@@ -180,6 +180,8 @@
       <button class="menu-item" onclick="showPage('blood-test',this)">
         <div class="icon">🩸</div><div>Blood Tests</div>
       </button>
+      <button class="menu-item" onclick="showPage('lab',this)"><div class="icon">🧪</div><div>Blood Lab</div></button>
+      <button class="menu-item" onclick="labInvoice()"><div class="icon">🧾</div><div>Lab Invoice</div></button>
       <button class="menu-item" onclick="showPage('records',this)">
         <div class="icon">📋</div><div>Records</div>
       </button>
@@ -406,6 +408,8 @@
         </div>
       </div>
     </div>
+
+    <div id="page-lab" class="page"><div class="card"><h3>🧪 Blood Lab <small>Group-wise Result Entry • Preview • A4 Print</small></h3><div class="lab-layout"><div id="labGroups"></div><div class="lab-work"><div class="lab-search"><input id="labPatientSearch" placeholder="Search patient name" oninput="labSearch()"></div><div id="labPatientList" class="lab-patient-list"></div><div id="labPatientSelected" class="lab-status">No patient selected</div><div id="labSelectedTest" class="lab-status">No test selected</div><div id="labResultForm" style="display:none"><div id="labParameters" class="form-grid"></div><div class="form-grid"><div class="form-group"><label>Technician</label><input id="labTechnician"></div><div class="form-group"><label>Verified By</label><input id="labVerifier"></div></div><div id="labStatus" class="lab-status"></div><div class="no-print-lab"><button class="btn btn-primary" onclick="labSave()">💾 Save Draft</button> <button class="btn btn-success" onclick="labVerify()">✅ Verify</button> <button class="btn btn-ghost" onclick="labPreview()">👁 Preview</button> <button class="btn btn-ghost" onclick="labPrint()">🖨 Print A4</button></div></div><div id="labPreview"></div></div></div></div></div>
 
     <!-- RECORDS -->
     <div id="page-records" class="page">
@@ -791,7 +795,7 @@
   </div>
 </div>
 
-<script src="./js/blood-test.js"></script>
+<script src="./js/blood-test.js"></script><script src="./js/blood-lab.js"></script>
 <script>
 // ============================================
 // SUPABASE CONFIGURATION
